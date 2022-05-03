@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:11.1-alpine
+    ports:
+      - 5430:5432
+    environment:
+      POSTGRES_DB: hotel2
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
