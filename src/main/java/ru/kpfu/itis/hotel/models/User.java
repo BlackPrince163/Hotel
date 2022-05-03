@@ -15,6 +15,14 @@ import java.util.List;
  * 11-004
  */
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "user_hotel")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

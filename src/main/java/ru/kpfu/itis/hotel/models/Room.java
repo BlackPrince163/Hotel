@@ -1,6 +1,6 @@
 package ru.kpfu.itis.hotel.models;
 
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +12,14 @@ import javax.persistence.*;
  * 11-004
  */
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "room_hotel")
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
