@@ -1,0 +1,29 @@
+package ru.kpfu.itis.hotel.services;
+
+import ru.kpfu.itis.hotel.dto.AvailabilityDto;
+import ru.kpfu.itis.hotel.exceptions.NoRoomsAvailableException;
+import ru.kpfu.itis.hotel.models.Room;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * 06.05.2022
+ * Hotel
+ *
+ * @author Niyaz Khadimullin @BlackPrince163
+ * 11-004
+ */
+
+public interface RoomsService {
+    void save(Room entity);
+    void delete(Room entity);
+
+    Optional<Room> findById(Long id);
+    Optional<Room> findByName(String name);
+    List<Room> getAllRooms();
+    List<Room> getAvailableRooms(AvailabilityDto availabilityDto) throws NoRoomsAvailableException;
+
+    List<Room> findMostPopularRooms();
+
+}
