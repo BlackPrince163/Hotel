@@ -23,6 +23,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "user_hotel")
+
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
