@@ -93,6 +93,14 @@ public class VkOAuthUtils {
         return restTemplate.getForObject(uri, VkAuthToken.class);
     }
 
+    public String getAuthRedirectUri() {
+        return vkRedirectUrl;
+    }
+
+    public String getAuthClientId() {
+        return vkClientId;
+    }
+
     @Data
     @NoArgsConstructor
     @AllArgsConstructor

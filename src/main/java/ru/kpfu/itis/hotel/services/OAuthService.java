@@ -12,4 +12,6 @@ import ru.kpfu.itis.hotel.models.User;
 
 public interface OAuthService {
     User vkAuth(String code);
+
+    String getAuthorizationStartUrl();
 }

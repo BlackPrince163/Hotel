@@ -75,7 +75,7 @@
                         <div class="form-check form-check-inline">
                             <div>
                                 Или
-                                <a href="http://oauth.vk.com/authorize?client_id=8161943&redirect_uri=https://hotel-123.herokuapp.com/auth/vk&response_type=code&scope=email&v=5.131">Авторизация через ВКонтакте</a>
+                                <a href="${oauthStartUri}">Авторизация через ВКонтакте</a>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 package ru.kpfu.itis.hotel.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.kpfu.itis.hotel.dto.VkAuthToken;
 import ru.kpfu.itis.hotel.dto.VkUserDto;
@@ -54,5 +55,16 @@ public class OAuthServiceImpl implements OAuthService {
         }
 
         throw new IllegalArgumentException("Vk authorization failed. User is not found.");
+    }
+
+    public String getAuthorizationStartUrl() {
+        // http://localhost:8080/auth/vk
+        String redirect_uri = vkUtils.getAuthRedirectUri();
+        String client_id = vkUtils.getAuthClientId();
+        return "http://oauth.vk.com/authorize?" +
+                "client_id=" + client_id + "&" +
+                "redirect_uri=" + redirect_uri + "&"+
+                "response_type=code&scope=email&" +
+                "v=5.131";
     }
 }
