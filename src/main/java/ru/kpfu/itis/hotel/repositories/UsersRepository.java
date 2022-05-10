@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import ru.kpfu.itis.hotel.models.User;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -20,6 +21,8 @@ import java.util.Optional;
 public interface UsersRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByEmail(String email);
+
+    List<User> findAllByIsDeletedIsNull();
 
     @Transactional
     @Modifying

@@ -27,7 +27,12 @@ public interface UsersService {
     Optional<User> findById(Long id);
     Optional<User> findOneByEmail(String email);
 
+    User addUser(UserDto user);
+
     void signUp(UserDto userDto) throws DuplicateEntryException;
     void signIn(LoginDto loginDto) throws WrongEmailOrPasswordException;
 
+    User updateUser(Long userId, UserDto user);
+
+    void deleteUser(Long userId);
 }

@@ -39,6 +39,20 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
+    public User addUser(UserDto user) {
+        User newUser = User.builder()
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .role(User.Role.USER_ROLE)
+                .state(User.State.ACTIVE_STATE)
+                .build();
+        usersRepository.save(newUser);
+        return newUser;
+    }
+
+
+
+    @Override
     public void delete(User entity) {
         usersRepository.delete(entity);
     }
@@ -60,7 +74,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public List<User> getAllUsers() {
-        return usersRepository.findAll();
+        return usersRepository.findAllByIsDeletedIsNull();
     }
 
     @Override
@@ -99,5 +113,21 @@ public class UsersServiceImpl implements UsersService {
                 throw new WrongEmailOrPasswordException();
             }
         } else throw new WrongEmailOrPasswordException();
+    }
+
+    @Override
+    public User updateUser(Long userId, UserDto user) {
+        User userForUpdate = usersRepository.findById(userId).orElseThrow(IllegalArgumentException::new);
+        userForUpdate.setFirstName(user.getFirstName());
+        userForUpdate.setLastName(user.getLastName());
+        usersRepository.save(userForUpdate);
+        return userForUpdate;
+    }
+
+    @Override
+    public void deleteUser(Long userId) {
+        User userForDelete = usersRepository.findById(userId).orElseThrow(IllegalArgumentException::new);
+        userForDelete.setIsDeleted(true);
+        usersRepository.save(userForDelete);
     }
 }
