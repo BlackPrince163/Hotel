@@ -1,5 +1,6 @@
 package ru.kpfu.itis.hotel.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.kpfu.itis.hotel.dto.AvailabilityDto;
 import ru.kpfu.itis.hotel.exceptions.NoRoomsAvailableException;
@@ -18,8 +19,14 @@ import java.util.Optional;
  */
 
 @Service(value = "roomsService")
-public class RoomsServiceImpl implements RoomsService {
-    private RoomsRepository roomsRepository;
+public class
+RoomsServiceImpl implements RoomsService {
+    private final RoomsRepository roomsRepository;
+
+    @Autowired
+    public RoomsServiceImpl(RoomsRepository roomsRepository) {
+        this.roomsRepository = roomsRepository;
+    }
 
     @Override
     public void save(Room entity) {
@@ -30,6 +37,11 @@ public class RoomsServiceImpl implements RoomsService {
     public void delete(Room entity) {
         roomsRepository.delete(entity);
     }
+
+    /*@Override
+    public void update(Room entity) {
+        roomsRepository.update(entity);
+    }*/
 
     @Override
     public Optional<Room> findById(Long id) {

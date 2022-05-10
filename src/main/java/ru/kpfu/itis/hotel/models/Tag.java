@@ -13,6 +13,7 @@ import java.util.List;
  * 11-004
  */
 
+//@Data
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -20,6 +21,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "tag_hotel")
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
