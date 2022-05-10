@@ -10524,3 +10524,143 @@ java.lang.NullPointerException: null
 2022-05-10 18:20:43.526  INFO 14372 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-05-10 18:20:43.527  INFO 14372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-05-10 18:20:43.528  INFO 14372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-10 20:19:19.810  INFO 14372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 20:19:19.827  INFO 14372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 20:19:19.837  INFO 14372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 20:19:28.400  INFO 14460 --- [main] ru.kpfu.itis.hotel.HotelApplication      : Starting HotelApplication using Java 1.8.0_302 on DESKTOP-C0BSHQ4 with PID 14460 (D:\stud sql\JAVA\Hotel\target\classes started by niazh in D:\stud sql\JAVA\Hotel)
+2022-05-10 20:19:28.411  INFO 14460 --- [main] ru.kpfu.itis.hotel.HotelApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-10 20:19:29.917  INFO 14460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 20:19:29.980  INFO 14460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2022-05-10 20:19:30.977  INFO 14460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 20:19:30.987  INFO 14460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 20:19:30.987  INFO 14460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-10 20:19:31.139  INFO 14460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 20:19:31.139  INFO 14460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2659 ms
+2022-05-10 20:19:31.239  INFO 14460 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 20:19:31.439  INFO 14460 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 20:19:31.520  INFO 14460 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 20:19:31.587  INFO 14460 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-10 20:19:31.793  INFO 14460 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 20:19:31.942  INFO 14460 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-05-10 20:19:32.917  INFO 14460 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 20:19:32.927  INFO 14460 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 20:19:33.519  WARN 14460 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 20:19:33.760  INFO 14460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/auth/**'] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5896cb9c, org.springframework.security.web.context.SecurityContextPersistenceFilter@58739e5e, org.springframework.security.web.header.HeaderWriterFilter@58e03769, org.springframework.security.web.csrf.CsrfFilter@2af9a5ef, org.springframework.security.web.authentication.logout.LogoutFilter@690df641, ru.kpfu.itis.hotel.security.ouath.VkOAuthAuthenticationFilter@3dc39459, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1124910c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628ba266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44b9c7c4, org.springframework.security.web.session.SessionManagementFilter@6a51ae7c, org.springframework.security.web.access.ExceptionTranslationFilter@2499b971, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@602298b]
+2022-05-10 20:19:33.775  INFO 14460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@205159dc, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c3e363, org.springframework.security.web.header.HeaderWriterFilter@333d44f6, org.springframework.security.web.csrf.CsrfFilter@6d8b7ea9, org.springframework.security.web.authentication.logout.LogoutFilter@3b4bd341, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1186374c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16c5b50a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f8659d0, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@20820df0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43c0c13a, org.springframework.security.web.session.SessionManagementFilter@350bbd5d, org.springframework.security.web.access.ExceptionTranslationFilter@5a39e554, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@406ad6d5]
+2022-05-10 20:19:33.787  INFO 14460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ba060af, org.springframework.security.web.context.SecurityContextPersistenceFilter@7bfa1eb5, org.springframework.security.web.header.HeaderWriterFilter@22686ddb, org.springframework.security.web.csrf.CsrfFilter@63a7781, org.springframework.security.web.authentication.logout.LogoutFilter@542c65d9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53ba1175, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@320ff86f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5817f1ca, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3688baab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32b46831, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5353dd09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b395581, org.springframework.security.web.session.SessionManagementFilter@2e29f28e, org.springframework.security.web.access.ExceptionTranslationFilter@73b74615, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ed7ae]
+2022-05-10 20:19:34.484  INFO 14460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 20:19:34.496  INFO 14460 --- [main] ru.kpfu.itis.hotel.HotelApplication      : Started HotelApplication in 6.73 seconds (JVM running for 7.864)
+2022-05-10 20:19:35.387  INFO 14460 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 20:19:35.388  INFO 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 20:19:35.389  INFO 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-10 20:19:56.284 ERROR 14460 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [delete from persistent_logins where username = ?]; nested exception is org.postgresql.util.PSQLException: ОШИБКА: отношение "persistent_logins" не существует
+  Позиция: 13
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1541) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:667) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl.removeUserTokens(JdbcTokenRepositoryImpl.java:115) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.logout(PersistentTokenBasedRememberMeServices.java:162) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.CompositeLogoutHandler.logout(CompositeLogoutHandler.java:54) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:99) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_302]
+Caused by: org.postgresql.util.PSQLException: ОШИБКА: отношение "persistent_logins" не существует
+  Позиция: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:135) ~[postgresql-42.3.4.jar:42.3.4]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	... 56 common frames omitted
+
+2022-05-10 21:48:23.684  INFO 14460 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:48:23.688  INFO 14460 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 21:48:23.692  INFO 14460 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 21:48:32.389  INFO 5872 --- [main] ru.kpfu.itis.hotel.HotelApplication      : Starting HotelApplication using Java 1.8.0_302 on DESKTOP-C0BSHQ4 with PID 5872 (D:\stud sql\JAVA\Hotel\target\classes started by niazh in D:\stud sql\JAVA\Hotel)
+2022-05-10 21:48:32.392  INFO 5872 --- [main] ru.kpfu.itis.hotel.HotelApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-10 21:48:33.055  INFO 5872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 21:48:33.115  INFO 5872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2022-05-10 21:48:33.918  INFO 5872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 21:48:33.927  INFO 5872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 21:48:33.927  INFO 5872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-10 21:48:34.056  INFO 5872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 21:48:34.056  INFO 5872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1616 ms
+2022-05-10 21:48:34.158  INFO 5872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 21:48:34.361  INFO 5872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 21:48:34.426  INFO 5872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 21:48:34.468  INFO 5872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-10 21:48:34.613  INFO 5872 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 21:48:34.723  INFO 5872 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-05-10 21:48:36.079  INFO 5872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 21:48:36.090  INFO 5872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:48:36.903  WARN 5872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 21:48:37.258  INFO 5872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/auth/**'] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22ca1242, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d20616a, org.springframework.security.web.header.HeaderWriterFilter@734a149a, org.springframework.security.web.csrf.CsrfFilter@2969a9a6, org.springframework.security.web.authentication.logout.LogoutFilter@3313463c, ru.kpfu.itis.hotel.security.ouath.VkOAuthAuthenticationFilter@4ae280da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c4d1c7b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b1e1f02, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54b44879, org.springframework.security.web.session.SessionManagementFilter@4a9b92c6, org.springframework.security.web.access.ExceptionTranslationFilter@628ba266, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d2def55]
+2022-05-10 21:48:37.280  INFO 5872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73b74615, org.springframework.security.web.context.SecurityContextPersistenceFilter@43c0c13a, org.springframework.security.web.header.HeaderWriterFilter@9e62fb, org.springframework.security.web.csrf.CsrfFilter@5486ee92, org.springframework.security.web.authentication.logout.LogoutFilter@6fde6f05, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f9b8129, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@731db93f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67941d, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@55fb36de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22686ddb, org.springframework.security.web.session.SessionManagementFilter@205159dc, org.springframework.security.web.access.ExceptionTranslationFilter@20820df0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6eabe718]
+2022-05-10 21:48:37.296  INFO 5872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19faedcc, org.springframework.security.web.context.SecurityContextPersistenceFilter@cdbe995, org.springframework.security.web.header.HeaderWriterFilter@5d92e8e2, org.springframework.security.web.csrf.CsrfFilter@7d64a960, org.springframework.security.web.authentication.logout.LogoutFilter@16b64a03, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5817f1ca, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ed7ae, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c6927f0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1c2dd89b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7dd45c93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@374b6e33, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ef2cbe6, org.springframework.security.web.session.SessionManagementFilter@542c65d9, org.springframework.security.web.access.ExceptionTranslationFilter@166ce247, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ba060af]
+2022-05-10 21:48:38.912  INFO 5872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 21:48:38.926  INFO 5872 --- [main] ru.kpfu.itis.hotel.HotelApplication      : Started HotelApplication in 7.07 seconds (JVM running for 8.188)
+2022-05-10 21:49:05.765  INFO 5872 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 21:49:05.765  INFO 5872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 21:49:05.767  INFO 5872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-10 21:54:14.446  INFO 5872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:54:14.448  INFO 5872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 21:54:14.456  INFO 5872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
