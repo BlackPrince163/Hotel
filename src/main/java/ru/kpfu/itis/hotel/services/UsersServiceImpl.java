@@ -11,6 +11,14 @@ import ru.kpfu.itis.hotel.exceptions.WrongEmailOrPasswordException;
 import ru.kpfu.itis.hotel.models.User;
 import ru.kpfu.itis.hotel.repositories.UsersRepository;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,16 +34,50 @@ import java.util.Optional;
 public class UsersServiceImpl implements UsersService {
     private final UsersRepository usersRepository;
     private final PasswordEncoder encoder;
+    private final OAuthService oAuthService;
 
     @Autowired
-    public UsersServiceImpl(UsersRepository usersRepository) {
+    public UsersServiceImpl(UsersRepository usersRepository, OAuthService oAuthService) {
         this.usersRepository = usersRepository;
+        this.oAuthService = oAuthService;
         this.encoder = new BCryptPasswordEncoder();
     }
 
     @Override
     public void save(User entity) {
         usersRepository.save(entity);
+    }
+
+    public User getUser() throws IOException {
+        URL url = null;
+        url = new URL(oAuthService.getAuthorizationStartUrl());
+        HttpURLConnection httpConnection = null;
+        httpConnection = (HttpURLConnection) url.openConnection();
+        httpConnection.setRequestMethod("GET");
+        httpConnection.setRequestProperty("authority", "oauth.vk.com");
+        httpConnection.setRequestProperty("accept", "text/html, application/xhtml+xml, application/xm1; q=0.9");
+        httpConnection.setRequestProperty("accept-language", "ru-RU,ru");
+        httpConnection.setRequestProperty("cache-control", "max-age=0");
+
+
+        StringBuilder content;
+
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(httpConnection.getInputStream()))) {
+            String line;
+            content = new StringBuilder();
+            while ((line = input.readLine()) != null) {
+                // Append each line of the response and separate them
+                content.append(line);
+                content.append(System.lineSeparator());
+            }
+        } finally {
+            httpConnection.disconnect();
+        }
+        String token = httpConnection.getContentType();
+        User user = new User();
+        // Output the content to the console
+        System.out.println(content.toString());
+        return user;
     }
 
     @Override
@@ -49,7 +91,6 @@ public class UsersServiceImpl implements UsersService {
         usersRepository.save(newUser);
         return newUser;
     }
-
 
 
     @Override
@@ -74,7 +115,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public List<User> getAllUsers() {
-        return usersRepository.findAllByIsDeletedIsNull();
+        return usersRepository.findAll();
     }
 
     @Override
@@ -127,7 +168,6 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public void deleteUser(Long userId) {
         User userForDelete = usersRepository.findById(userId).orElseThrow(IllegalArgumentException::new);
-        userForDelete.setIsDeleted(true);
-        usersRepository.save(userForDelete);
+        usersRepository.delete(userForDelete);
     }
 }

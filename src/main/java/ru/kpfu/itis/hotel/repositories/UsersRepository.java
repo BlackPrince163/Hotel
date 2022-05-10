@@ -22,7 +22,6 @@ public interface UsersRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByEmail(String email);
 
-    List<User> findAllByIsDeletedIsNull();
 
     @Transactional
     @Modifying

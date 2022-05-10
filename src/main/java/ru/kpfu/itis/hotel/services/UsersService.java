@@ -6,6 +6,8 @@ import ru.kpfu.itis.hotel.exceptions.DuplicateEntryException;
 import ru.kpfu.itis.hotel.exceptions.WrongEmailOrPasswordException;
 import ru.kpfu.itis.hotel.models.User;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +30,8 @@ public interface UsersService {
     Optional<User> findOneByEmail(String email);
 
     User addUser(UserDto user);
+
+    User getUser() throws IOException;
 
     void signUp(UserDto userDto) throws DuplicateEntryException;
     void signIn(LoginDto loginDto) throws WrongEmailOrPasswordException;

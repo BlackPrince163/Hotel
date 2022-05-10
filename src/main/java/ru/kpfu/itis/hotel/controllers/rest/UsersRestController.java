@@ -9,6 +9,7 @@ import ru.kpfu.itis.hotel.dto.UserDto;
 import ru.kpfu.itis.hotel.models.User;
 import ru.kpfu.itis.hotel.services.UsersService;
 
+import javax.annotation.security.PermitAll;
 import java.util.List;
 
 /**
@@ -26,6 +27,7 @@ public class UsersRestController {
     private UsersService usersService;
 
     @GetMapping("/api/users")
+    @PermitAll
     public List<User> getUsers() {
         return usersService.getAllUsers();
     }
@@ -36,11 +38,13 @@ public class UsersRestController {
     }
 
     @PutMapping("/api/users/{user-id}")
+    @PermitAll
     public User updateUser(@PathVariable("user-id") Long userId, @RequestBody UserDto user) {
         return usersService.updateUser(userId, user);
     }
 
     @DeleteMapping("/api/users/{user-id}")
+    @PermitAll
     public ResponseEntity<?> deleteUser(@PathVariable("user-id") Long userId) {
         usersService.deleteUser(userId);
         return ResponseEntity.ok().build();

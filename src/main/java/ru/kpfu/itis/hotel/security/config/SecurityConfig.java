@@ -34,10 +34,10 @@ import javax.sql.DataSource;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/**");
-    }
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        web.ignoring().antMatchers("/**");
+//    }
 
     @Order(2)
     @Configuration
@@ -64,6 +64,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     /*.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).
                     and()*/
                     .authorizeRequests()
+                    .antMatchers("/api/users/**").permitAll()
                     .antMatchers("/profile").authenticated()
                     .and()
                     .formLogin()

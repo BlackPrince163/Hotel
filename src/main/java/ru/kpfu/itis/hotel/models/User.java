@@ -34,7 +34,6 @@ public class User {
     private String email;
     private String hashPassword;
 
-    private Boolean isDeleted;
 
     @Enumerated(value = EnumType.STRING)
     private State state;

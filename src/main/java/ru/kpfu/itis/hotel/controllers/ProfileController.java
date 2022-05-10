@@ -13,6 +13,7 @@ import ru.kpfu.itis.hotel.security.details.UserDetailsImpl;
 import ru.kpfu.itis.hotel.services.UsersService;
 
 import javax.annotation.security.PermitAll;
+import java.io.IOException;
 import java.util.Optional;
 
 /**
@@ -34,7 +35,8 @@ public class ProfileController {
     }
 
     @GetMapping("/profile")
-    public String getProfilePage(@AuthenticationPrincipal UserDetails userDetails, Model model) {
+    public String getProfilePage(@AuthenticationPrincipal UserDetails userDetails, Model model) throws IOException {
+        User userVK = usersService.getUser();
         model.addAttribute("isAuthenticated", userDetails != null);
 
         Optional<User> userByEmailOptional = usersService.findOneByEmail(userDetails.getUsername());
