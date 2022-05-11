@@ -59,6 +59,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         }
 
         @Override
+        public void configure(WebSecurity web) throws Exception {
+            web.ignoring().antMatchers("/api/users/**");
+        }
+
+        @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
                     /*.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).
